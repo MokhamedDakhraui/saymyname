@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Set";
+}
+
+<h2>Set</h2>
+
+<form method="post" asp-controller="Home" asp-action="Set">
+    <div class="form-group">
+        <div class="col-sm-push-10">
+            <p>Set your name:</p>
+            <input type="text" class="form-control" name="Name" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-push-10">
+            <input type="submit" class="btn" name="submit" value="Set" />
+        </div>
+    </div>
+</form>
