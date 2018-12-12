@@ -8,7 +8,7 @@ branches:
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test -c Release
+  - dotnet test
 deploy:
   provider: heroku
   app: saymyname-service
