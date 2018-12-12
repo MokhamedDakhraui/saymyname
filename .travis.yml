@@ -2,14 +2,14 @@ language: csharp
 dist: trusty
 mono: none
 dotnet: 2.1.300
-branches:  
-  only:  
+branches:
+  only:
     - master
 script:
-  - dotnet restore 
+  - dotnet restore
   - dotnet build
 deploy:
   provider: heroku
   app: saymyname-service
   api_key:
-    secure: "hVnGaGSsU6qTdf6Z+wMVDL82nXLVcpE5WBl48e0Hx6GQ20qOWQaR8jBY+TVxW8P0cG5JwWNDMZABpUlK8JOiOlaXwgsx6UbvLMuScf/NA0XfQjVBaKhQfkNN+hcrt8e5UZCAJFjY9kx1ux43z6JBvIHMVcCZtwj37Xz+iY+WEJb18tqfAISoPUHb8qWM4Vbbb1GKVH6nuKWVSfMSD6yetx+aHLSr0hOCiSNWolBmlq+TSG6yIFRwxq0rMRk3c+4Fii9UKxKZ891kYdeYR2DWr+QUy+7rxPdE79rWUCNq3UXXj3KYqHExMd29SLHbHWyYBuswriR+bC6Eq4ICBCc1m8bfxPAeOpbLcseSxQEfryAfqv6tcAfdhi0dQrxKXrGRbkLX0yoMVcAO7M5dd9q6//+2IMhWE9t39vZej1YIxJNU/imD41/hyB9/S+NixK5CY6+tbo08H+FIFD3LQJm3QFpvP0ULX5ygnHgxX99xkflUb3miHimm3sc1ku2D8h2qjkPrwT5T7fQwzxbZpzfrQS/pUguW86wLafTu5Xj3HLlUDokgt87+W/5Ht+0FdJk9uFKmOEOSi1B9xjq2mkw78q490ju2zfWeLJm+RW+DWf5ckb5748k+mnz3tr80Mx/7eX5TXdugXUUVQjxcIPEk4NWIncz9TBQXDK1RztoLZXs="
+    secure: ZA1mDBO7CBYwbMo2iigA9Wf/mMuAYClxO2fC5OjDskhv5krjcMXDIOQYFDlKWcw+1C8BWTocxr/pMIrRIeCURaRMM35CHVtBpClBu9DpO1ts9kDXbnHT4hgSQLN5TRXXQRYTjB26DjaYT8eOnDz0meg0QZapZpwQQlPFJ/w8OIjYFroMQf1I1UDwGE6Fu13PVjf7c11yAM8EjQHkAXAOcnxFhM5mPeVbiZyHoAVbP2dWdl1xKxfbyru3PcZolvat74/twX/E1h6eCj0vN0/dhQW++WtA8VW/bUOshYtvwAqbADJmhRAkC8xA/2GhsC+N/OqdmELMNYIOOmESeABV3uxfV8bvJXy8hysPF1CTo+mS3RyXxxuH8IbTQ3JH6LIKCZZ/Jk0EG+kup0iaYpHkeqtQo6zmD0apxemvPJBmzNWCvaL9KmiDVIaCh+yKhfmKR3uGGWWEMXR32tqb3PyI4S6urmjqeVxy6FjTIotsmYoQT52oyTI8U90sQYfPg1nFUmdzx4jcO6kydT1USrKbLuBGhw3VV+3A7I+nRr52LQRl4HfAsAkxJx340FJxc9s0/78sWkM6bNbhgg0HWJG4Xa74Q3vzyspUL/BCoDuGhZSjqjxq+gVAKBFCiR8NpY0p1uIeoe9nyztWXuXBG0hy6M03h0FSpeUBPq9RfdC88Ho=
