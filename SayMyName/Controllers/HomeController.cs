@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SayMyName.Contracts;
 using SayMyName.Models;
 using System.Diagnostics;
 
@@ -6,9 +7,16 @@ namespace SayMyName.Controllers
 {
     public class HomeController : Controller
     {
+        public INameRepository NameRepository { get; }
+
+        public HomeController(INameRepository nameRepository)
+        {
+            this.NameRepository = nameRepository;
+        }
+
         public IActionResult Say()
         {
-            ViewData["Name"] = Request.Cookies.TryGetValue("name", out string name) ? name : "no name";
+            ViewData["Name"] = this.NameRepository.GetName() ?? "no name";
 
             return View();
         }
@@ -21,9 +29,9 @@ namespace SayMyName.Controllers
         [HttpPost]
         public IActionResult Set(string name)
         {
-            Response.Cookies.Append("name", name);
+            this.NameRepository.SetName(name);
 
-            return View();
+            return RedirectToAction(nameof(Say));
         }
 
         public IActionResult Error()
