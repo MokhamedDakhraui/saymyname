@@ -8,7 +8,7 @@ branches:
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test
+  - dotnet test SayMyName.Tests/SayMyName.Tests.csproj
 deploy:
   provider: heroku
   app: saymyname-service
